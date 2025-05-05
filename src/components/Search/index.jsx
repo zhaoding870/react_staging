@@ -7,12 +7,24 @@ export default class Search extends Component {
         //获取用户输入(连续结构+重命名)
         const {keyWordElement:{value:keyWord}} = this;
         // console.log(keyWord);
+        this.props.updateState({
+            isFirst: false,
+            isLoading: true
+        });
         //发送网络请求
-        axios.get(`/api1/search/users?q=${keyWord}`).then(
+        axios.get(`/api1/search/users1222?q=${keyWord}`).then(
             response => {
-                this.props.updateUsers(response.data.items);
+                this.props.updateState({
+                    isLoading: false,
+                    users: response.data.items
+                });
             },
-            error => {console.log('失败了', error)}
+            error => {
+                this.props.updateState({
+                    isLoading: false,
+                    err: error.message
+                });
+            }
         )
     }
 
