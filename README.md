@@ -44,3 +44,9 @@
     1. public/index.html 中引入样式时不写 ./ 写 / (常用)
     2. public/index.html 中引入样式时不写 ./ 写 %PUBLIC_URL%/ （常用）
     3. 使用 HashRouter
+
+## 八、路由的严格匹配与模糊匹配
+    1. 默认使用的是模糊匹配（输入的路径必须保护匹配的路径，而且顺序必须一致）
+    2. 开启严格匹配： <Route exact path="home" component={Home} />
+    3. 严格匹配不要随便开启，需要的时候再打开，有些时候开启会导致无法继续匹配二级路由
+    
