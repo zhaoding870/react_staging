@@ -50,3 +50,11 @@
     2. 开启严格匹配： <Route exact path="home" component={Home} />
     3. 严格匹配不要随便开启，需要的时候再打开，有些时候开启会导致无法继续匹配二级路由
     
+## 九、Redirect 的使用
+    1. 一般写在所有路由注册的最下方，当所有路由都无法匹配时，跳转到 Redirect 指定的路由
+    2. 具体编码
+        <Switch>
+            <Route path="/about" component={About}/>
+            <Route path="/home" component={Home}/>
+            <Redirect to="/about"/>
+        </Switch>
