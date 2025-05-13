@@ -74,3 +74,7 @@
         接收参数：const {search} = this.props.location
         备注：接收到的search参数是urlencoded编码字符串，需要借助querystring解析
     3. state 参数
+        路由链接（携带参数）：<Link to={{pathname:'/home/message/detail', state:{id:msgObj.id， title:msgObj.title}}}>{msgObj.title}</Link>
+        注册路由（无需声明，正常注册即可）：<Route path="/home/message/detail" component={Detail}/>
+        接收参数：const {state} = this.props.location
+        备注：刷新也可以携带参数
