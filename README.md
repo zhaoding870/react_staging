@@ -78,3 +78,11 @@
         注册路由（无需声明，正常注册即可）：<Route path="/home/message/detail" component={Detail}/>
         接收参数：const {state} = this.props.location
         备注：刷新也可以携带参数
+
+## 十二、 编程式路由
+    使用如下方法实现编程式路由
+        this.props.history.replace()
+        this.props.history.push()
+        this.props.history.goBack()
+        this.props.history.goForward()
+        this.props.history.go(n)
