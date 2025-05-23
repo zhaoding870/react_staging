@@ -97,4 +97,4 @@
         3. 刷新后对 state 参数的影响
             BrowserRouter 没有任何影响，因为 state 保存在history 对象中
             HashRouter 刷新后会导致路由state参数的丢失
-        4. 备注： HashRouter 可以解决一些路径错误的相关问题
+        4. 备注： HashRouter 可以解决一些路径错误的相关问题test
